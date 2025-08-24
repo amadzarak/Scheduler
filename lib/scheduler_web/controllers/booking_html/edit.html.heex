@@ -1,0 +1,8 @@
+<Layouts.app flash={@flash}>
+  <.header>
+    Edit Booking {@booking.id}
+    <:subtitle>Use this form to manage booking records in your database.</:subtitle>
+  </.header>
+
+  <.booking_form changeset={@changeset} action={~p"/bookings/#{@booking}"} return_to={~p"/bookings"} />
+</Layouts.app>

@@ -18,6 +18,8 @@ defmodule SchedulerWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
+    resources "/services", ServiceController
+    resources "/bookings", BookingController
   end
 
   # Other scopes may use custom stacks.

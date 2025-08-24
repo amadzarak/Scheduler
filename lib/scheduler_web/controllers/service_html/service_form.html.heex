@@ -1,0 +1,10 @@
+<.form :let={f} for={@changeset} action={@action}>
+  <.input field={f[:service_name]} type="text" label="Service name" />
+  <.input field={f[:description]} type="text" label="Description" />
+  <.input field={f[:active]} type="checkbox" label="Active" />
+  <.input field={f[:price]} type="number" label="Price" step="any" />
+  <footer>
+    <.button variant="primary">Save Service</.button>
+    <.button :if={@return_to} href={@return_to}>Cancel</.button>
+  </footer>
+</.form>

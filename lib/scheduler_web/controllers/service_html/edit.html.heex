@@ -1,0 +1,8 @@
+<Layouts.app flash={@flash}>
+  <.header>
+    Edit Service {@service.id}
+    <:subtitle>Use this form to manage service records in your database.</:subtitle>
+  </.header>
+
+  <.service_form changeset={@changeset} action={~p"/services/#{@service}"} return_to={~p"/services"} />
+</Layouts.app>
